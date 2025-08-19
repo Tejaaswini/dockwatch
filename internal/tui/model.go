@@ -9,9 +9,9 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
 
-	"dockvol-tui/internal/dockercli"
-	"dockvol-tui/internal/domain"
-	"dockvol-tui/internal/provider"
+	"dockwatch/internal/dockercli"
+	"dockwatch/internal/domain"
+	"dockwatch/internal/provider"
 )
 
 var (

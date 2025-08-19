@@ -2,7 +2,7 @@ package dockercli
 
 import (
 	"context"
-	"dockvol-tui/internal/domain"
+	"dockwatch/internal/domain"
 	"encoding/json"
 	"fmt"
 	"os/exec"

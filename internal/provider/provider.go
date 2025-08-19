@@ -2,7 +2,7 @@ package provider
 
 import (
 	"context"
-	"dockvol-tui/internal/domain"
+	"dockwatch/internal/domain"
 )
 
 // Provider defines the interface for volume data providers

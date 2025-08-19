@@ -1,4 +1,4 @@
-module dockvol-tui
+module dockwatch
 
 go 1.23.0
 

@@ -1,11 +1,13 @@
-A terminal user interface (TUI) for managing Docker volumes with a focus on disk forensics and cleanup.
+# Dockwatch — Docker Volumes & Disk Forensics TUI
+
+A terminal user interface (TUI) for monitoring and managing Docker volumes with a focus on disk forensics and cleanup.
 
 ## Features
 
 - **Volume Table**: View all Docker volumes with size, status, and metadata
 - **Details Pane**: Inspect individual volume details and file previews
 - **Prune Planning**: Mark volumes for deletion and see space savings
-- **Mock Data**: Runs without Docker for development and testing
+- **Real-time Data**: Connects directly to Docker daemon for live volume information
 
 ## Quick Start
 
@@ -14,11 +16,11 @@ A terminal user interface (TUI) for managing Docker volumes with a focus on disk
 go mod tidy
 
 # Run the application
-go run ./cmd/dockvol
+go run ./cmd/dockwatch
 
 # Or build a binary
-go build -o dockvol ./cmd/dockvol
-./dockvol
+go build -o dockwatch ./cmd/dockwatch
+./dockwatch
 ```
 
 ## Controls
@@ -37,6 +39,22 @@ go build -o dockvol ./cmd/dockvol
 - Add context switcher (docker contexts)
 - Add JSON export (for CI)
 - Add filters (only orphaned, sort by size)
+- Add volume size monitoring over time
+- Add alerts for volumes exceeding size thresholds
+
+## Project Structure
+
+```
+dockwatch/
+├── cmd/dockwatch/        # Main application entry point
+├── internal/
+│   ├── domain/           # Core data types (Volume struct)
+│   ├── tui/              # Bubble Tea TUI implementation
+│   ├── dockercli/        # Docker CLI integration
+│   └── provider/         # Provider interface definitions
+├── go.mod                # Go module definition
+└── README.md             # This file
+```
 
 ## Dependencies
 
