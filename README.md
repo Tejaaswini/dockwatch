@@ -1,5 +1,3 @@
-# dockvol-tui — Docker Volumes & Disk Forensics TUI
-
 A terminal user interface (TUI) for managing Docker volumes with a focus on disk forensics and cleanup.
 
 ## Features
